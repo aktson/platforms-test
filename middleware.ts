@@ -25,7 +25,7 @@ export default async function middleware(req: NextRequest) {
 
   // Only for demo purposes - remove this if you want to use your root domain as the landing page
   if (hostname === "vercel.pub" || hostname === "platforms.vercel.app") {
-    return NextResponse.redirect("https://utdannet-platforms.vercel.app");
+    return NextResponse.redirect("https://platforms-test-theta.vercel.app/");
   }
 
   /*  You have to replace ".vercel.pub" with your own domain if you deploy this example under your domain.
@@ -35,7 +35,7 @@ export default async function middleware(req: NextRequest) {
   const currentHost =
     process.env.NODE_ENV === "production" && process.env.VERCEL === "1"
       ? hostname
-        .replace(`utdannet-platforms.vercel.app`, "")
+        .replace(`platforms-test-theta.vercel.app`, "")
         .replace(`.platformize.vercel.app`, "")
       : hostname.replace(`.localhost:3000`, "");
 
